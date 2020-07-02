@@ -1,38 +1,16 @@
 ---
-title: Page Not Found
+layout: default
+description: "Sorry, Page Not Found :("
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	{%- include head.html -%}
-	<style>
-	h1 {
-		background-color: #eee;
-		width: 220px;
-		height: 220px;
-		border-radius: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center
-	}
-	body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		font-size: 20px;
-		height: 80vh;
-	}
-	p {
-		font-size: 1.5em;
-		text-align: center;
-		margin: 0;
-		line-height: 2em;
-	}
-	</style>
-</head>
-<body>
-	<h1>404</h1>
-	<p>Page not found.</p>
-</body>
-</html>
+
+{% include header.html %}
+
+<header class="g-banner np-banner {{ site.postPatterns | prepend: 'post-pattern-' }}" data-theme="{{ site.theme-color }}">
+    <div class="post-wrapper">
+        <h1>404</h1>
+        <span class="subheading">{{ page.description }}</span>
+        <a href="{{ site.nav.home }}" class="btn">Back to home</a>
+    </div>
+</header>
+
+
